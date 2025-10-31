@@ -1458,7 +1458,7 @@ for nn in range(0, iterations1):
         if fake_unif[ii] < low_prate2_ages[ii] or fake_unif[ii] > high_prate2_ages[ii]:
             faker_unif_out.append(1)
     
-    faker_Gauss_outside_ages[nn] = np.sum(faker_unif_out)/len(fake_unif)*100
+    faker_Unif_outside_ages[nn] = np.sum(faker_unif_out)/len(fake_unif)*100
     
     
     
@@ -1486,7 +1486,7 @@ for nn in range(0, iterations1):
         if fake_unif[ii] < low_prate2_noages[ii] or fake_unif[ii] > high_prate2_noages[ii]:
             faker_unif_out.append(1)
     
-    faker_Gauss_outside_noages[nn] = np.sum(faker_unif_out)/len(fake_unif)*100
+    faker_Unif_outside_noages[nn] = np.sum(faker_unif_out)/len(fake_unif)*100
     
         
     print('time to run one bootstrap is ', (time.time() - start_time1)/60, ' minutes')  
