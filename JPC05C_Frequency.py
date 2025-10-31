@@ -26,7 +26,7 @@ start_code = time.time()
 #%% Load Data
 
 #### grainsize data 
-JPCC = np.genfromtxt(r"JPC05/For_Publication/core_data/JPC05_Composite_GS.csv", delimiter=",", skip_header=1)
+JPCC = np.genfromtxt(r"JPC05/For_Publication/core_data/JPC05C_GS.csv", delimiter=",", skip_header=1)
 GS_depth = JPCC[:, 0] 
 d10 = JPCC[:, 1]
 d50 = JPCC[:, 2]
@@ -35,7 +35,7 @@ d90 = JPCC[:, 3]
 #### age data
 #choose age model slumps based on the threshold set in the next section
 #if you have not run the age model yet, comment out this section and return to it after running the section below
-ages = np.genfromtxt(r"JPC05/For_Publication/core_data/JPC05_Composite_ages.txt", skip_header=1) 
+ages = np.genfromtxt(r"JPC05/For_Publication/core_data/JPC05_Ages.txt", skip_header=1) 
 ages_depth = ages[:,0]
 ind = np.isin(ages_depth, GS_depth) #get rid of duplicate ages from slumps
 
@@ -382,7 +382,7 @@ np.savetxt(r"JPC05/For_Publication/core_data/event_gs.csv", event_gs_array, deli
 
 #%% Load Age Distributions from Bacon
 #ages are in YBP
-age_dist = np.genfromtxt(r"JPC05/For_Publication/core_data/JPC05_Age_Distributions.csv", delimiter=",", skip_header=1)
+age_dist = np.genfromtxt(r"JPC05/For_Publication/core_data/JPC05C_Age_Distributions.csv", delimiter=",", skip_header=1)
 age_dist = age_dist[:,1:] #remove first index column of nans
 
 
