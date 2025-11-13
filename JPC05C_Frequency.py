@@ -732,6 +732,7 @@ active_starts_ages = np.array(active_starts)
 active_ends_ages = np.array(active_ends)
 
 #### Analysis B
+#mean rate no ages is equivalent to median age timeseries
 ind = np.argwhere(mean_rate_noages >= high_thresh_meanrate_noages)
 activeyrs = allyrs[ind]
 active_starts = []
@@ -778,7 +779,7 @@ quiet_starts_noages = np.array(quiet_starts)
 quiet_ends_noages = np.array(quiet_ends)
 
 
-#### Analysis B
+#### Analysis D
 ind = np.argwhere(low_rate2_ages[0:2800] <= low_thresh_meanrate_ages)
 quietyrs = allyrs[ind]
 quiet_starts = []
@@ -800,7 +801,7 @@ quiet_starts_ages = np.array(quiet_starts)
 quiet_ends_ages = np.array(quiet_ends)
 
 
-#### Analysis C
+#### Analysis B
 #mean rate no ages is equivalent to median age timeseries
 ind = np.argwhere(mean_rate_noages[0:2800] <= low_thresh_meanrate_noages)
 quietyrs = allyrs[ind]
