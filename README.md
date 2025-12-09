@@ -1,5 +1,5 @@
 # SkanBay_StormReconstruction
-Codes and raw data needed to run analysis and produce figures from McKeon et al. (2025), Paleostorm Frequency Recorded in a High Latitude Fjord
+Codes and raw data needed to run analysis and produce figures from McKeon et al. (2025), North Pacific extreme storms reconstructed with a novel approach to estimating storm frequency and uncertainty
 
 Code JPC05C_Frequency.py contains all analysis related to sediment core processing, data analysis, and storm frequency calculation.
 
