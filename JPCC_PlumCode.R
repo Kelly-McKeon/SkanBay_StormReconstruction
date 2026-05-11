@@ -49,10 +49,6 @@ axis(1, at = major_ticks, labels = major_ticks,
      mgp = c(3, 0.5, 0))  # Adjust label positioning
 # Add minor tick marks without labels
 axis(1, at = minor_ticks, labels = FALSE, tcl = -0.25)
-# If labels are still too crowded, try alternating labels:
-# alt_labels <- ifelse(major_ticks %% 2000 == 0, major_ticks, "")
-# axis(1, at = major_ticks, labels = alt_labels, cex.axis = 1.2, las = 2)
-# Optional: Add vertical grid lines at major tick marks
 abline(v = major_ticks, col = "gray90", lty = 1, lwd = 0.5)
 
 # Add custom y-axis with tick marks every 1000 years
@@ -94,7 +90,7 @@ event_depths = read.csv("C:/Users/kelly/OneDrive - Woods Hole Oceanographic Inst
 
 #### Get Age Distributions at Event Depths
 x = as.numeric(event_depths[,1])
-ens = matrix(data=NA, nrow=5000, ncol=length(x)) #make empty matrix, use 4K because that's the size bacon outputs for the distributions
+ens = matrix(data=NA, nrow=5000, ncol=length(x)) #make empty matrix
 count = 1
 for (val in x){
   event = Bacon.Age.d(val) #bacon command for the age distributions
@@ -115,6 +111,8 @@ write.csv(ens, file = "C:/Users/kelly/OneDrive - Woods Hole Oceanographic Instit
 
 #### Read in Event Depths with Witter Deposits Excluded 
 
+# these files are made in python code
+
 #on a mac
 event_depths = read.csv("~/Library/CloudStorage/OneDrive-WoodsHoleOceanographicInstitution/Documents/WHOI/Alaska/Codes/Coherent_Codes/JPC05/For_Publication/Revision/Witter_2019_Comparison/event_depth_nowitter.csv",
                         header = FALSE)
@@ -124,7 +122,7 @@ event_depths = read.csv("C:/Users/kelly/OneDrive - Woods Hole Oceanographic Inst
 
 #### Get Age Distributions at non-Tsunami Overlap Events
 x = as.numeric(event_depths[,1])
-ens = matrix(data=NA, nrow=5000, ncol=length(x)) #make empty matrix, use 4K because that's the size bacon outputs for the distributions
+ens = matrix(data=NA, nrow=5000, ncol=length(x)) 
 count = 1
 for (val in x){
   event = Bacon.Age.d(val) #bacon command for the age distributions
@@ -143,6 +141,7 @@ write.csv(ens, file = "C:/Users/kelly/OneDrive - Woods Hole Oceanographic Instit
 ################################################################################
 
 #### Read in event depths of excluded Skan Deposits
+# these files are made in python code
 
 #on a mac
 event_depths = read.csv("~/Library/CloudStorage/OneDrive-WoodsHoleOceanographicInstitution/Documents/WHOI/Alaska/Codes/Coherent_Codes/JPC05/For_Publication/Revision/Witter_2019_Comparison/event_depth_skan_ns.csv",
@@ -153,7 +152,7 @@ event_depths = read.csv("C:/Users/kelly/OneDrive - Woods Hole Oceanographic Inst
 
 #### Get Age Distributions at non-Tsunami Overlap Events
 x = as.numeric(event_depths[,1])
-ens = matrix(data=NA, nrow=5000, ncol=length(x)) #make empty matrix, use 4K because that's the size bacon outputs for the distributions
+ens = matrix(data=NA, nrow=5000, ncol=length(x)) #make empty matrix
 count = 1
 for (val in x){
   event = Bacon.Age.d(val) #bacon command for the age distributions
