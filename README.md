@@ -5,7 +5,7 @@ Codes and raw data needed to run analysis and produce figures from McKeon et al.
 
 Code JPC05C_Frequency.py contains all analysis related to sediment core processing, data analysis, and storm frequency calculation. 
 
-Data to run this code is in the core_data and Witter_2019_Comparison folders. The simulation analysis takes a significant amount of time to run. Results of all anaysis run with this code, including the simulation analysis are posted with the core data (photos, radiographs, raw XRF data, core logs) on the SFSL website.
+Data to run this code is in the core_data and Witter_2019_Comparison folders. 
 
 
 
