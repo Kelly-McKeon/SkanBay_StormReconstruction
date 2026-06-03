@@ -25,3 +25,8 @@ Code JPC05_XRF.m is the code used to plot the XRF data.
 
 Data to run this code is in the XRF_Data folder.
 
+
+All data, results, photos, and lithologic diagrams are archived in raw, full resolution format with the MBLWHOI Library at this DOI.
+https://doi.org/10.26027/DATAHRVBCG 
+
+
